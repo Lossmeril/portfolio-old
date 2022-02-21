@@ -14,8 +14,8 @@ import {
     IconButton,
     useColorModeValue
 } from "@chakra-ui/react"
-
 import { HamburgerIcon } from "@chakra-ui/icons"
+import ThemeToggleButton from "./theme-toggle-button"
 
 const LinkItem = ({ href, path, children }) => {
     const active = path === href
@@ -25,8 +25,8 @@ const LinkItem = ({ href, path, children }) => {
         <NextLink href={href}>
             <Link
                 p={2}
-                bg={active ? 'glassTeal' : undefined}
-                color={active ? 'red' : inactiveColor}>
+                bg={active ? 'michalGreen' : undefined}
+                color={active ? 'michalCream' : inactiveColor}>
                 {children}
             </Link>
         </NextLink>
@@ -40,7 +40,7 @@ const Navbar = props => {
             position="fixed"
             as="nav"
             w="100%"
-            bg={useColorModeValue("#ffffff40", "#20202380")}
+            bg={useColorModeValue("#ffffff40", "michalGray")}
             style={{ backdropFilter: "blur(10px)" }}
             zIndex={1}
             {...props}
@@ -67,10 +67,6 @@ const Navbar = props => {
                     flexGrow={1}
                     mt={{ base: 4, nmd: 0 }}
                 >
-                    <LinkItem href="/" path={path}>
-                        About
-                    </LinkItem>
-
                     <LinkItem href="/portfolio" path={path}>
                         Portfolio
                     </LinkItem>
@@ -81,15 +77,11 @@ const Navbar = props => {
                 </Stack>
 
                 <Box flex={1} textAlign="right">
+                    <ThemeToggleButton />
                     <Box ml={2} display={{ base: "inline-block", md: "none" }}>
                         <Menu>
                             <MenuButton as={IconButton} icon={<HamburgerIcon />} variant="outline" aria-label="Options" />
                             <MenuList>
-                                <NextLink href="/" passHref>
-                                    <MenuItem as={Link}>
-                                        About
-                                    </MenuItem>
-                                </NextLink>
                                 <NextLink href="/portfolio" passHref>
                                     <MenuItem as={Link}>
                                         Portfolio
