@@ -38,7 +38,7 @@ const Page = () => {
                     ml={{ md: 6 }}
                     textAlign="center">
                     <Box
-                        borderColor={useColorModeValue("michalGray", "michalCream")}
+                        borderColor="michalCream"
                         borderWidth={2}
                         borderStyle="solid"
                         w="100px"
@@ -49,7 +49,7 @@ const Page = () => {
                     >
                         <ProfileImage
                             src="/images/michal.png"
-                            alt="Profile image"
+                            alt="Michal Špitálský"
                             borderRadius='full'
                             width="100%"
                             height="100%"

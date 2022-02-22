@@ -13,13 +13,22 @@ const ThemeToggleButton = () => {
                 initial={{ rotate: -180, scale: 0, opacity: 0 }}
                 animate={{ rotate: 0, scale: 1, opacity: 1 }}
                 exit={{ rotate: 180, scale: 0, opacity: 0 }}
-                transition={{ duration: 0.4 }}>
+                transition={{ duration: 0.4 }}
+                whileHover={{
+                    scale: 1.1,
+                    transition: { duration: 0.2 },
+                  }}
+                  >
                 <IconButton
                     aria-label="Toggle theme"
                     backgroundColor={useColorModeValue(theme.colors.michalGray, theme.colors.michalCream)}
                     color={useColorModeValue(theme.colors.michalCream, theme.colors.michalGray)}
                     icon={useColorModeValue(<MoonIcon />, <SunIcon />)}
                     onClick={toggleColorMode}
+                    _hover={{
+                        backgroundColor: useColorModeValue(theme.colors.michalGray, theme.colors.michalCream),
+                        color: useColorModeValue(theme.colors.michalCream, theme.colors.michalGray)
+                      }}
                 ></IconButton>
             </motion.div>
         </AnimatePresence>
