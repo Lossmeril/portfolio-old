@@ -1,12 +1,18 @@
+import NextLink from "next/link"
 import {
     Container,
     Box,
     Heading,
     chakra,
-    useColorModeValue
+    useColorModeValue,
+    Link,
+    Button
 } from "@chakra-ui/react"
 import Section from "../components/section"
 import Image from 'next/image'
+import Paragraph from "../components/paragraph"
+import ColoredText from "../components/colored-text"
+import { MoonIcon } from "@chakra-ui/icons"
 
 const ProfileImage = chakra(Image, {
     shouldForwardProp: prop => ['width', 'height', 'src', 'alt'].includes(prop)
@@ -22,7 +28,7 @@ const Page = () => {
             <Box display={{ md: 'flex' }}>
                 <Box flexGrow={1}>
                     <Heading as="h2" variant="page-title">
-                        Michal Špitálský
+                        Michal <ColoredText>Špitálský</ColoredText>
                     </Heading>
                     <p>Inter vepres rosae nascuntur</p>
                 </Box>
@@ -52,13 +58,20 @@ const Page = () => {
                 </Box>
             </Box>
 
-            
-
             <Section delay="0.1" >
                 <Heading as="h3" variant="section-title">
                     Graphic Designer
                 </Heading>
-                <p>Lorem Ipsum</p>
+                <Paragraph>
+                    Takuya is a freelance and a full-stack developer based in Osaka with a passion for building digital services/stuff he wants. He has a knack for all things launching products, from planning and designing all the way to solving real-life problems with code. When not online, he loves hanging out with his camera. Currently, he is living off of his own product called {' '}
+                    <NextLink href=""><Link>Inkscape</Link></NextLink>
+                    .
+                </Paragraph>
+                <Box textAlign="center" my={4}>
+                    <NextLink href="">
+                        <Button leftIcon={<MoonIcon />} colorScheme="teal">Portfolio</Button>
+                    </NextLink>
+                </Box>
             </Section>
 
             <Section delay="1.1" >
