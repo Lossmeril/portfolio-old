@@ -6,13 +6,15 @@ import {
     chakra,
     useColorModeValue,
     Link,
-    Button
+    Button,
+    Divider,
 } from "@chakra-ui/react"
 import Section from "../components/section"
 import Image from 'next/image'
 import Paragraph from "../components/paragraph"
-import ColoredText from "../components/colored-text"
 import { MoonIcon } from "@chakra-ui/icons"
+import TextLoop from "../components/text-loop"
+import theme from "../libs/theme"
 
 const ProfileImage = chakra(Image, {
     shouldForwardProp: prop => ['width', 'height', 'src', 'alt'].includes(prop)
@@ -24,9 +26,9 @@ const Page = () => {
             <Box display={{ md: 'flex' }}>
                 <Box flexGrow={1}>
                     <Heading as="h2" variant="page-title">
-                        Michal <ColoredText>Špitálský</ColoredText>
+                        Michal Špitálský
                     </Heading>
-                    <p>Inter vepres rosae nascuntur</p>
+                    Hi, I am Michal and I am a <TextLoop texts={["graphic designer", "filmmaker", "web designer", "digital artist"]} textColors={[theme.colors.michalGreen.base, theme.colors.michalPink, theme.colors.michalGreen.base, theme.colors.michalPink]} />
                 </Box>
                 <Box
                     flexShrink={0}
@@ -34,7 +36,7 @@ const Page = () => {
                     ml={{ md: 6 }}
                     textAlign="center">
                     <Box
-                        borderColor="michalCream"
+                        borderColor="michalCream.base"
                         borderWidth={2}
                         borderStyle="solid"
                         w="100px"

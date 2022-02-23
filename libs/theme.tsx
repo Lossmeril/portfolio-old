@@ -13,22 +13,20 @@ const colors = {
   },
   michalGreen: {
     base: '#48BF84',
-    saturated: "#00FF79"
+    saturated: "#202023"
   },
-  michalGray: '#1E1E1E',
-
-  michalPink: "#3D7AED",
+  michalGray: {
+    base: '#1E1E1E',
+    darker: '#121212',
+  },
+  michalPink: "#FF63C3",
   michalGold: "#FFCA1C",
-}
-
-const gradients = {
-  gradientGreen: "linear-gradient(90deg, rgba(72,191,132,1) 0%, rgba(0,255,121,1) 100%)",
 }
 
 const styles = {
   global: props => ({
     body: {
-      bg: mode(colors.michalPink, '#202023')(props)
+      bg: mode(colors.michalCream.saturated, colors.michalGray.base)(props)
     }
   })
 }
@@ -60,5 +58,5 @@ const config = {
   useSystemColorMode: true
 }
 
-const theme = extendTheme({ config, styles, components, fonts, colors, gradients })
+const theme = extendTheme({ config, styles, components, fonts, colors })
 export default theme

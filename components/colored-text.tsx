@@ -1,8 +1,8 @@
 import theme from "../libs/theme";
 
-const ColoredText = ({ children }) => {
+const ColoredText = ({ children, textColor }) => {
     return (
-        <span style={{color: theme.colors.michalGreen}}>
+        <span style={{color: textColor}}>
             {children}
         </span>
     )
