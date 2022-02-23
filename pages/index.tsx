@@ -34,7 +34,7 @@ const Home = () => {
                         <Heading as="h1" variant="page-title">
                             Michal Špitálský
                         </Heading>
-                        Hi, I am Michal and I am a <TextLoop texts={["graphic designer", "filmmaker", "web designer", "digital artist"]} textColors={[theme.colors.michalGreen.base, theme.colors.michalPink, theme.colors.michalGreen.base, theme.colors.michalPink]} />
+                        Hi, I am Michal and I am a <TextLoop texts={["graphic designer ✍️", "filmmaker 🎬", "web designer 🖥️", "digital artist 🎨"]} textColors={[theme.colors.michalGreen.base, theme.colors.michalPink, theme.colors.michalGreen.base, theme.colors.michalPink]} />
                     </Box>
                     <Box
                         flexShrink={0}
