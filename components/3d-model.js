@@ -53,7 +53,7 @@ const Model = () => {
 
       // 640 -> 240
       // 8   -> 6
-      const scale = scH * 0.0001 + (scH < 480 ? 3 : 4.8)
+      const scale = scH * 0.0001 + 4.8
       const camera = new THREE.OrthographicCamera(
         -scale,
         scale,

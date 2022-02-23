@@ -17,8 +17,8 @@ export const ModelContainer = forwardRef(({ children }, ref) => (
     ref={ref}
     className="model"
     m="auto"
-    mt={['-20px', '-60px', '-80px']}
-    mb={['-40px', '-140px']}
+    mt={['-20px','-60px']}
+    mb={['-60px', '-120px']}
     w={[280, 480]}
     h={[280, 480]}
     position="relative"
