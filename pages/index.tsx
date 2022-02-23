@@ -8,6 +8,7 @@ import {
     Link,
     Button,
     SimpleGrid,
+    Divider,
 } from "@chakra-ui/react"
 import Section from "../components/section"
 import Image from 'next/image'
@@ -64,7 +65,7 @@ const Home = () => {
                         </Box>
                     </Box>
                 </Box>
-
+                <Divider mb={14} mt={2} />
                 <Section delay="0.1" >
                     <Heading as="h2" variant="section-title" textDecorationColor={theme.colors.michalGreen.base}>
                         Who am I?
@@ -73,7 +74,7 @@ const Home = () => {
                         I am a freelance designer, videographer and artist from Czechia. I love to tweak and design all things digital or physical and to explore all the different fields of IT.
                     </Paragraph>
                     <Paragraph>
-                        In my free time, I seek hobbies where I can make use of my creativity and sense of humour. I am also working on my feature documentary "Garden of Eden".
+                        In my free time, I seek hobbies where I can make use of my creativity and sense of humour. I am also working on my feature documentary &quot;Garden of Eden&quot;.
                     </Paragraph>
                     <Box textAlign="left" my={4}>
                         <NextLink href="">
@@ -113,7 +114,7 @@ const Home = () => {
                             TypeScript
                         </SkillBox>
                     </SimpleGrid>
-                    <NextLink href=""><Link>Inkscape</Link></NextLink>
+                    {/*<NextLink href=""><Link>Inkscape</Link></NextLink>*/}
                 </Section>
 
                 <Section delay="1.1" >
@@ -125,6 +126,12 @@ const Home = () => {
                 <Section delay="1.6" >
                     <Heading as="h2" variant="section-title" textDecorationColor={theme.colors.michalGreen.base}>
                         What do I love?
+                    </Heading>
+                </Section>
+
+                <Section delay="2.1" >
+                    <Heading as="h2" variant="section-title" textDecorationColor={theme.colors.michalGreen.base}>
+                        Where can you find me?
                     </Heading>
                 </Section>
 
