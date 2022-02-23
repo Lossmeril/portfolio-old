@@ -24,9 +24,14 @@ const Home = () => {
     return (
         <Layout>
             <Container>
-                <Box display={{ md: 'flex' }}>
-                    <Box flexGrow={1}>
-                        <Heading as="h2" variant="page-title">
+                <Box display={{ md: 'flex' }}
+                    bgGradient={useColorModeValue('linear(to-b,' + theme.colors.michalCream.saturated + '00 0%, ' + theme.colors.michalCream.saturated + 'FF 25%)', 'linear(to-b,' + theme.colors.michalGray.base + '00 0%, ' + theme.colors.michalGray.base + 'FF 50%)')}
+                >
+                    <Box flexGrow={1}
+                        pt={5}
+                        pb={10}
+                    >
+                        <Heading as="h1" variant="page-title">
                             Michal Špitálský
                         </Heading>
                         Hi, I am Michal and I am a <TextLoop texts={["graphic designer", "filmmaker", "web designer", "digital artist"]} textColors={[theme.colors.michalGreen.base, theme.colors.michalPink, theme.colors.michalGreen.base, theme.colors.michalPink]} />

@@ -13,7 +13,6 @@ import {
     MenuButton,
     IconButton,
     useColorModeValue,
-    Divider
 } from "@chakra-ui/react"
 import { HamburgerIcon } from "@chakra-ui/icons"
 import ThemeToggleButton from "./theme-toggle-button"
@@ -21,7 +20,7 @@ import theme from "../libs/theme"
 
 const LinkItem = ({ href, path, children }) => {
     const active = path === href
-    const inactiveColor = useColorModeValue('michalGray.base', "whiteAlpha.900")
+    const inactiveColor = useColorModeValue('michalGray.base', "whiteCream.base")
 
     return (
         <NextLink href={href}>
@@ -53,12 +52,10 @@ const Navbar = props => {
                 flexWrap="wrap"
                 alignItems="center"
                 justifyItems="space-between"
-                borderBottom={"solid 1px"+useColorModeValue(theme.colors.michalGray.base+"20", theme.colors.michalCream.base)}
+                /*borderBottom={"solid 1px"+useColorModeValue(theme.colors.michalGray.base+"20", theme.colors.michalCream.base)}*/
             >
                 <Flex align="center" mr={5}>
-                    <Heading as="h1" size="lg" letterSpacing={"tighter"}>
-                        <Logo />
-                    </Heading>
+                    <Logo />
                 </Flex>
 
                 <Stack
