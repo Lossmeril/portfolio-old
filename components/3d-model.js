@@ -13,7 +13,7 @@ const Model = () => {
   const [loading, setLoading] = useState(true)
   const [renderer, setRenderer] = useState()
   const [_camera, setCamera] = useState()
-  const [target] = useState(new THREE.Vector3(-0.5, 1.2, 0))
+  const [target] = useState(new THREE.Vector3(0 , 0.15, -0.5))
   const [initialCameraPosition] = useState(
     new THREE.Vector3(
       20 * Math.sin(0.2 * Math.PI),
@@ -53,7 +53,7 @@ const Model = () => {
 
       // 640 -> 240
       // 8   -> 6
-      const scale = scH * 0.005 + 4.8
+      const scale = scH * 0.001 + 4.8
       const camera = new THREE.OrthographicCamera(
         -scale,
         scale,
@@ -66,8 +66,8 @@ const Model = () => {
       camera.lookAt(target)
       setCamera(camera)
 
-      const ambientLight = new THREE.AmbientLight(0xcccccc, 1)
-      scene.add(ambientLight)
+     {/*const ambientLight = new THREE.AmbientLight(0xcccccc, 1)
+     scene.add(ambientLight)*/}
 
       const controls = new OrbitControls(camera, renderer.domElement)
       controls.autoRotate = true
