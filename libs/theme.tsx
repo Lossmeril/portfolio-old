@@ -1,17 +1,24 @@
-import { color, extendTheme, IconButton } from '@chakra-ui/react'
+import { extendTheme } from '@chakra-ui/react'
 import { mode } from '@chakra-ui/theme-tools'
 
 const fonts = {
-  heading: "'Konnect Extra Bold'"
+  heading: "'Konnect Extra Bold', sans-serif",
+  body: "'Poppins'"
 }
 
 const colors = {
-  michalCream: '#F4F4F4',
-  michalGreen: '#48BF84',
+  michalCream: {
+    base: '#F4F4F4',
+    saturated: '#F0E7DB'
+  },
+  michalGreen: {
+    base: '#48BF84',
+    saturated: "#00FF79"
+  },
   michalGray: '#1E1E1E',
 
-  michalCreamSaturated: "#F0E7DB",
-  michalGreenSaturated: "#00FF79"
+  michalPink: "#3D7AED",
+  michalGold: "#FFCA1C",
 }
 
 const gradients = {
@@ -21,7 +28,7 @@ const gradients = {
 const styles = {
   global: props => ({
     body: {
-      bg: mode('#f0e7db', '#202023')(props)
+      bg: mode(colors.michalPink, '#202023')(props)
     }
   })
 }
@@ -33,10 +40,10 @@ const components = {
         textDecoration: 'underline',
         fontSize: 20,
         textUnderlineOffset: 10,
-        textDecorationColor: colors.michalGreen,
+        textDecorationColor: colors.michalGreen.base,
         textDecorationThickness: 4,
         marginTop: 3,
-        marginBottom: 4
+        marginBottom: 6
       }
     }
   },

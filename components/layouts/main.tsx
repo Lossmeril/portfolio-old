@@ -20,7 +20,7 @@ const Main = ({children, router}) => {
 
             <Navbar path={router.asPath} />
 
-            <Container maxW="container.md" pt={140}>
+            <Container maxW="container.md" pt={130}>
                 <LazyModel />
                 {children}
             </Container>
