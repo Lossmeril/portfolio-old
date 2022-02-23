@@ -3,7 +3,7 @@ import { mode } from '@chakra-ui/theme-tools'
 
 const fonts = {
   heading: "'Konnect Extra Bold', sans-serif",
-  body: "'Poppins'"
+  body: "'Poppins', sans-serif"
 }
 
 const colors = {
@@ -38,17 +38,17 @@ const components = {
         textDecoration: 'underline',
         fontSize: 20,
         textUnderlineOffset: 10,
-        textDecorationColor: colors.michalGreen.base,
         textDecorationThickness: 4,
         marginTop: 3,
-        marginBottom: 6
+        marginBottom: 6,
+        textTransform: "lowercase"
       }
     }
   },
   Link: {
     baseStyle: props => ({
       color: mode('#3d7aed', '#ff63c3')(props),
-      textUnderlineOffset: 3
+      textUnderlineOffset: 3,
     })
   },
 }
