@@ -1,5 +1,6 @@
 import { motion } from "framer-motion"
-import { chakra, shouldForwardProp, Divider } from "@chakra-ui/react"
+import { chakra, shouldForwardProp, Divider, useColorModeValue} from "@chakra-ui/react"
+import theme from "../libs/theme"
 
 const StyledDiv = chakra(motion.div, {
     shouldForwardProp: prop => {
@@ -17,7 +18,7 @@ const Section = ({ children, delay = "0" }) => {
             >
                 {children}
             </StyledDiv>
-            <Divider mb={8} mt={12} />
+            <Divider mb={8} mt={12} opacity={0.2} borderColor={useColorModeValue(theme.colors.michalGray.base, theme.colors.michalCream.base)} />
         </>)
 }
 

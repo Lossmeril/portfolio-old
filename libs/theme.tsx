@@ -19,8 +19,10 @@ const colors = {
     base: '#1E1E1E',
     darker: '#121212',
   },
-  michalPink: "#FF63C3",
-  michalGold: "#FFCA1C",
+  highlight: {
+    dark: "#FF63C3",
+    light: "#3D7AED",
+  }
 }
 
 const styles = {
@@ -42,14 +44,33 @@ const components = {
         marginTop: 3,
         marginBottom: 6,
         textTransform: "lowercase"
-      }
+      },
+      'skill-title': props => ({
+        fontSize: 18,
+        textTransform: "lowercase",
+        color: mode(colors.highlight.light, colors.highlight.dark)(props)
+      })
     }
   },
   Link: {
     baseStyle: props => ({
-      color: mode('#3d7aed', '#ff63c3')(props),
+      color: mode(colors.highlight.light, colors.highlight.dark)(props),
       textUnderlineOffset: 3,
-    })
+    }),
+    variants: {
+      "skill-icon": props => ({
+        color: mode(colors.michalGray.base, colors.michalCream.base)(props),
+        
+        "&:hover": {
+          color: colors.michalGreen.base,
+        }
+      })
+    },
+    ListIcon: {
+      basestyle:{
+        fill: mode(colors.highlight.light, colors.highlight.dark),
+      }
+    }
   },
 }
 

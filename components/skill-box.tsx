@@ -1,9 +1,9 @@
-import { Box, useColorModeValue } from "@chakra-ui/react"
+import { Box } from "@chakra-ui/react"
 
 
 const SkillBox = ({children}) => {
     return (
-        <Box bg={useColorModeValue("blackAlpha.200", "whiteAlpha.200")} p={3} rounded={7}>
+        <Box mt={10}>
             {children}
         </Box>
     )
