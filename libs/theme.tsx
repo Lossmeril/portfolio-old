@@ -65,13 +65,13 @@ const components = {
           color: colors.michalGreen.base,
         }
       })
-    },
-    ListIcon: {
-      basestyle:{
-        fill: mode(colors.highlight.light, colors.highlight.dark),
-      }
     }
   },
+  ListIcon: {
+    basestyle: props => ({
+      fill: mode(colors.highlight.light, colors.highlight.dark)(props),
+    })
+  }
 }
 
 const config = {

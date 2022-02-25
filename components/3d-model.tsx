@@ -11,9 +11,9 @@ function easeOutCirc(x) {
 const Model = () => {
   const refContainer = useRef()
   const [loading, setLoading] = useState(true)
-  const [renderer, setRenderer] = useState()
+  const [renderer, setRenderer] = useState<any>()
   const [_camera, setCamera] = useState()
-  const [target] = useState(new THREE.Vector3(0 , 0.15, -0.5))
+  const [target] = useState(new THREE.Vector3(0, 0.15, -0.5))
   const [initialCameraPosition] = useState(
     new THREE.Vector3(
       20 * Math.sin(0.2 * Math.PI),
@@ -25,7 +25,7 @@ const Model = () => {
   const [_controls, setControls] = useState()
 
   const handleWindowResize = useCallback(() => {
-    const { current: container } = refContainer
+    const { current: container } = refContainer as any
     if (container && renderer) {
       const scW = container.clientWidth
       const scH = container.clientHeight
@@ -36,7 +36,7 @@ const Model = () => {
 
   /* eslint-disable react-hooks/exhaustive-deps */
   useEffect(() => {
-    const { current: container } = refContainer
+    const { current: container } = refContainer as any
     if (container && !renderer) {
       const scW = container.clientWidth
       const scH = container.clientHeight
@@ -66,8 +66,10 @@ const Model = () => {
       camera.lookAt(target)
       setCamera(camera)
 
-     {/*const ambientLight = new THREE.AmbientLight(0xcccccc, 1)
-     scene.add(ambientLight)*/}
+      {
+        /*const ambientLight = new THREE.AmbientLight(0xcccccc, 1)
+     scene.add(ambientLight)*/
+      }
 
       const controls = new OrbitControls(camera, renderer.domElement)
       controls.autoRotate = true
@@ -122,7 +124,9 @@ const Model = () => {
   }, [renderer, handleWindowResize])
 
   return (
-    <ModelContainer ref={refContainer}>{loading && <ModelSpinner />}</ModelContainer>
+    <ModelContainer refe={refContainer}>
+      {loading && <ModelSpinner />}
+    </ModelContainer>
   )
 }
 

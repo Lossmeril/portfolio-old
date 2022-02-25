@@ -1,4 +1,4 @@
-import { forwardRef } from 'react'
+import { forwardRef, MutableRefObject } from 'react'
 import { Box, Spinner } from '@chakra-ui/react'
 
 export const ModelSpinner = () => (
@@ -12,12 +12,16 @@ export const ModelSpinner = () => (
   />
 )
 
-export const ModelContainer = forwardRef(({ children }, ref) => (
+interface IProps {
+  refe?: MutableRefObject<undefined>
+}
+
+export const ModelContainer: React.FC<IProps> = ({ children, refe }) => (
   <Box
-    ref={ref}
     className="model"
+    ref={refe}
     m="auto"
-    mt={['-20px','-60px']}
+    mt={['-20px', '-60px']}
     mb={['-60px', '-120px']}
     w={[280, 480]}
     h={[280, 480]}
@@ -25,9 +29,9 @@ export const ModelContainer = forwardRef(({ children }, ref) => (
   >
     {children}
   </Box>
-))
+)
 
-const Loader = () => {
+const Loader: React.FC = () => {
   return (
     <ModelContainer>
       <ModelSpinner />
