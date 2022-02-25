@@ -51,6 +51,11 @@ const components = {
         textTransform: 'lowercase',
         color: mode(colors.highlight.light, colors.highlight.dark)(props)
       }),
+      'timeline-title': {
+        fontSize: '14pt',
+        textTransform: 'lowercase',
+        marginBottom: 3
+      }
     }
   },
   Link: {
