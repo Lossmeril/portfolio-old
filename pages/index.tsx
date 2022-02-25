@@ -5,16 +5,13 @@ import {
   Heading,
   chakra,
   useColorModeValue,
-  Button,
   Divider,
   Wrap,
   List,
   ListItem,
   ListIcon,
   SimpleGrid,
-  Tag,
-  TagLeftIcon,
-  TagLabel
+  Text
 } from '@chakra-ui/react'
 import Section from '../components/section'
 import Image from 'next/image'
@@ -27,6 +24,7 @@ import SkillBox from '../components/skill-box'
 import SkillIcon from '../components/skill-icon'
 
 /*ICONS*/
+import { AiOutlineFilePdf } from 'react-icons/ai'
 import { FaDiceD20, FaRecordVinyl } from 'react-icons/fa'
 import {
   RiFilmFill,
@@ -60,11 +58,14 @@ import {
   SiAdobepremierepro,
   SiAdobeaftereffects,
   SiAdobeaudition,
-  SiWordpress
+  SiWordpress,
+  SiMicrosoftoffice,
+  SiCinema4D
 } from 'react-icons/si'
 import { AvidIcon } from '../components/icons/avid-icon'
 import SkillTag from '../components/skill-tags'
 import ColoredText from '../components/colored-text'
+import { CeltxIcon } from '../components/icons/celtx'
 
 const ProfileImage = chakra(Image, {
   shouldForwardProp: prop => ['width', 'height', 'src', 'alt'].includes(prop)
@@ -90,10 +91,10 @@ const Home = () => {
           )}
         >
           <Box flexGrow={1} pt={5} pb={10}>
-            <Heading as="h1" variant="page-title">
+            <Heading as="h1" variant="page-title" pb={15}>
               Michal Špitálský
             </Heading>
-            Hi, I am Michal and I am a{' '}
+            <Text>Hello everyone! I am Michal and I am a</Text>
             <TextLoop
               texts={[
                 'graphic designer ✍️',
@@ -117,16 +118,17 @@ const Home = () => {
           </Box>
           <Box
             flexShrink={0}
-            mt={{ base: 4, md: 0 }}
+            mt={{ base: 5, md: 7 }}
             ml={{ md: 6 }}
-            textAlign="center"
+            mb={{ base: 2, md: 0 }}
+            textAlign={{ base: 'left', md: 'center' }}
           >
             <Box
               borderColor="michalCream.base"
               borderWidth={2}
               borderStyle="solid"
-              w="100px"
-              h="100px"
+              w="110px"
+              h="110px"
               display="inline-block"
               borderRadius="full"
               overflow="hidden"
@@ -134,14 +136,22 @@ const Home = () => {
               <ProfileImage
                 src="/images/michal.png"
                 alt="Michal Špitálský"
-                borderRadius="full"
-                width="100%"
-                height="100%"
+                width="110px"
+                height="110px"
               />
             </Box>
           </Box>
         </Box>
-        <Divider mb={14} mt={2} />
+        <Divider
+          mb={12}
+          mt={8}
+          opacity={0.2}
+          borderColor={useColorModeValue(
+            theme.colors.michalGray.base,
+            theme.colors.michalCream.base
+          )}
+        />
+
         <Section delay="0.1">
           <Heading
             as="h2"
@@ -169,7 +179,7 @@ const Home = () => {
             <PortfolioButton icon={<IoImagesSharp />} link="">
               Portfloio
             </PortfolioButton>
-            <PortfolioButton icon={<IoImagesSharp />} link="">
+            <PortfolioButton icon={<AiOutlineFilePdf />} link="">
               PDF portfolio
             </PortfolioButton>
           </Box>
@@ -209,6 +219,7 @@ const Home = () => {
                 name="Adobe After Effects"
                 skill={3}
               />
+              <SkillIcon as={SiCinema4D} name="Cinema 4D" skill={3} />
               <SkillIcon as={SiAdobeaudition} name="Adobe Audition" skill={3} />
               <SkillIcon
                 as={AvidIcon}
@@ -223,6 +234,12 @@ const Home = () => {
               <SkillIcon as={SiReact} name="React" skill={3} />
               <SkillIcon as={SiPhp} name="PHP" skill={4} />
               <SkillIcon as={SiWordpress} name="Wordpress" skill={5} />
+              <SkillIcon
+                as={SiMicrosoftoffice}
+                name="Microsoft Office"
+                skill={5}
+              />
+              <SkillIcon as={CeltxIcon} name="CeltX" skill={4} />
             </Wrap>
           </SkillBox>
           <SkillBox>

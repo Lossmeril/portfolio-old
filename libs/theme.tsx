@@ -13,15 +13,15 @@ const colors = {
   },
   michalGreen: {
     base: '#48BF84',
-    saturated: "#202023"
+    saturated: '#202023'
   },
   michalGray: {
     base: '#1E1E1E',
-    darker: '#121212',
+    darker: '#121212'
   },
   highlight: {
-    dark: "#FF63C3",
-    light: "#3D7AED",
+    dark: '#FF63C3',
+    light: '#3D7AED'
   }
 }
 
@@ -43,11 +43,11 @@ const components = {
         textDecorationThickness: 4,
         marginTop: 3,
         marginBottom: 6,
-        textTransform: "lowercase"
+        textTransform: 'lowercase'
       },
       'skill-title': props => ({
         fontSize: 18,
-        textTransform: "lowercase",
+        textTransform: 'lowercase',
         color: mode(colors.highlight.light, colors.highlight.dark)(props)
       })
     }
@@ -55,28 +55,27 @@ const components = {
   Link: {
     baseStyle: props => ({
       color: mode(colors.highlight.light, colors.highlight.dark)(props),
-      textUnderlineOffset: 3,
+      textUnderlineOffset: 3
     }),
     variants: {
-      "skill-icon": props => ({
+      'skill-icon': props => ({
         color: mode(colors.michalGray.base, colors.michalCream.base)(props),
-        
-        "&:hover": {
-          color: colors.michalGreen.base,
+
+        '&:hover': {
+          color: colors.michalGreen.base
         }
       })
     }
   },
   ListIcon: {
     basestyle: props => ({
-      fill: mode(colors.highlight.light, colors.highlight.dark)(props),
+      fill: mode(colors.highlight.light, colors.highlight.dark)(props)
     })
   }
 }
 
 const config = {
-  initialColorMode: 'dark',
-  useSystemColorMode: true
+  initialColorMode: 'dark'
 }
 
 const theme = extendTheme({ config, styles, components, fonts, colors })
