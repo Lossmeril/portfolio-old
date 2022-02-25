@@ -12,7 +12,14 @@ import {
 import { RiStarFill, RiStarLine } from 'react-icons/ri'
 import theme from '../libs/theme'
 
-const SkillIcon = ({ as, name = 'not fileld', skill = 0, w = 8, h = 8 }) => {
+const SkillIcon = ({
+  as,
+  name = 'not filleld',
+  skill = 0,
+  w = 8,
+  h = 8,
+  children = ''
+}) => {
   const color = useColorModeValue(
     theme.colors.highlight.light,
     theme.colors.highlight.dark
@@ -44,6 +51,7 @@ const SkillIcon = ({ as, name = 'not fileld', skill = 0, w = 8, h = 8 }) => {
                 </span>
               ))}
             </p>
+            <p>{children}</p>
           </PopoverBody>
         </PopoverContent>
       </Popover>

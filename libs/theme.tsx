@@ -43,13 +43,14 @@ const components = {
         textDecorationThickness: 4,
         marginTop: 3,
         marginBottom: 6,
-        textTransform: 'lowercase'
+        textTransform: 'lowercase',
+        textDecorationColor: colors.michalGreen.base
       },
       'skill-title': props => ({
         fontSize: 18,
         textTransform: 'lowercase',
         color: mode(colors.highlight.light, colors.highlight.dark)(props)
-      })
+      }),
     }
   },
   Link: {

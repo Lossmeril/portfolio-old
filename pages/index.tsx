@@ -153,11 +153,7 @@ const Home = () => {
         />
 
         <Section delay="0.1">
-          <Heading
-            as="h2"
-            variant="section-title"
-            textDecorationColor={theme.colors.michalGreen.base}
-          >
+          <Heading as="h2" variant="section-title">
             Who am I?
           </Heading>
           <Paragraph>
@@ -186,11 +182,7 @@ const Home = () => {
         </Section>
 
         <Section delay="0.6">
-          <Heading
-            as="h2"
-            variant="section-title"
-            textDecorationColor={theme.colors.michalGreen.base}
-          >
+          <Heading as="h2" variant="section-title">
             What can I do?
           </Heading>
           <SkillBox>
@@ -238,7 +230,9 @@ const Home = () => {
                 as={SiMicrosoftoffice}
                 name="Microsoft Office"
                 skill={5}
-              />
+              >
+                ECDL certification
+              </SkillIcon>
               <SkillIcon as={CeltxIcon} name="CeltX" skill={4} />
             </Wrap>
           </SkillBox>
@@ -263,21 +257,13 @@ const Home = () => {
         </Section>
 
         <Section delay="1.1">
-          <Heading
-            as="h2"
-            variant="section-title"
-            textDecorationColor={theme.colors.michalGreen.base}
-          >
+          <Heading as="h2" variant="section-title">
             How did I get here?
           </Heading>
         </Section>
 
         <Section delay="1.6">
-          <Heading
-            as="h2"
-            variant="section-title"
-            textDecorationColor={theme.colors.michalGreen.base}
-          >
+          <Heading as="h2" variant="section-title">
             What do I love?
           </Heading>
 
@@ -326,11 +312,7 @@ const Home = () => {
         </Section>
 
         <Section delay="2.1">
-          <Heading
-            as="h2"
-            variant="section-title"
-            textDecorationColor={theme.colors.michalGreen.base}
-          >
+          <Heading as="h2" variant="section-title">
             Where can you find me?
           </Heading>
         </Section>
