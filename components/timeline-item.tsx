@@ -13,8 +13,8 @@ export const TimelineItemSmall = ({ children, img }) => {
   return (
     <>
       <Box
-        maxH="150px"
-        maxW="300px"
+        maxH={{ base: '200px', md: '150px' }}
+        maxW={{ base: 'lg', md: '300px' }}
         borderWidth="1px"
         borderRadius="lg"
         overflow="hidden"
@@ -25,9 +25,8 @@ export const TimelineItemSmall = ({ children, img }) => {
       >
         <Image
           objectFit="cover"
-          height="115px"
-          maxW="300px"
-          width="100%"
+          height={{ base: '150px', md: '115px' }}
+          width={{ base: 'lg', md: '100%' }}
           src={img}
           alt={children}
         />
@@ -44,7 +43,7 @@ export const TimelineItemLarge = ({ title, img, width, children }) => {
   return (
     <>
       <Box
-        maxW={width}
+        maxW={{ base: 'lg', md: width }}
         borderWidth="1px"
         borderRadius="lg"
         overflow="hidden"
@@ -54,16 +53,16 @@ export const TimelineItemLarge = ({ title, img, width, children }) => {
         )}
       >
         <Grid templateColumns="repeat(3, 1fr)">
-          <GridItem colSpan={1}>
+          <GridItem colSpan={{ base: 3, md: 1 }}>
             <Image
               objectFit="cover"
-              height="150px"
+              height={{ base: 'auto', md: '150px' }}
               maxW="100%"
               src={img}
-              alt="Obraz"
+              alt={title}
             />
           </GridItem>
-          <GridItem colSpan={2}>
+          <GridItem colSpan={{ base: 3, md: 2 }}>
             <Box p={5}>
               <Heading as="h4" variant="timeline-title">
                 {title}
@@ -80,8 +79,8 @@ export const TimelineItemLarge = ({ title, img, width, children }) => {
 export const TimelineItemText = ({ children }) => {
   return (
     <Box
-      height="150px"
-      width="150px"
+      height={{ base: 'auto', md: '150px' }}
+      width={{ base: 'lg', md: '150px' }}
       borderWidth="1px"
       borderRadius="lg"
       borderColor={useColorModeValue(
