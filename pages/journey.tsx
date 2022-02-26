@@ -4,13 +4,13 @@ import {
   useColorModeValue,
   Divider,
   Heading,
-  Text
+  Text,
+  AspectRatio
 } from '@chakra-ui/react'
 import theme from '../libs/theme'
 import Layout from '../components/layouts/article'
 import Section from '../components/section'
 
-import { AiOutlineFilePdf } from 'react-icons/ai'
 import Timeline from '../components/timeline'
 import {
   TimelineItemSmall,
@@ -46,6 +46,7 @@ const Journey = () => {
               Some things are just too old to include in the portfolio...
               However, without them I would not be where I am now! ❤️
             </Text>
+            <Text>And I must say I made some progress...!</Text>
           </Box>
         </Box>
         <Divider
@@ -60,10 +61,6 @@ const Journey = () => {
 
         <Section delay="0.6">
           <Timeline year="2012">
-            <TimelineItemText>
-              Editing my first videos in{' '}
-              <ColoredText>Windows Movie Maker</ColoredText>
-            </TimelineItemText>
             <TimelineItemLarge
               title="First stop-motion animations"
               img="/images/journey/stop-motion-animations.gif"
@@ -72,10 +69,17 @@ const Journey = () => {
               Experiments using <ColoredText>MS Paint</ColoredText> and{' '}
               <ColoredText>Windows Movie Maker</ColoredText>.
             </TimelineItemLarge>
+            <TimelineItemText>
+              Editing my first videos in{' '}
+              <ColoredText>Windows Movie Maker</ColoredText>
+            </TimelineItemText>
+            <TimelineItemSmall img="/images/journey/first-logo.png">
+              Logo
+            </TimelineItemSmall>
             <TimelineItemLarge
               title="My first montages"
               img="/images/journey/first-montages.jpg"
-              width="lg"
+              width="sm"
             >
               At this point I &quot;designed&quot; mainly using{' '}
               <ColoredText>Power Point</ColoredText> to remove background and
@@ -120,26 +124,95 @@ const Journey = () => {
             <TimelineItemSmall img="/images/journey/dnd.jpg">
               D&amp;D illustration
             </TimelineItemSmall>
+
+            <TimelineItemText>
+              Started using <ColoredText>PhotoFiltre studio</ColoredText> for my
+              static graphics
+            </TimelineItemText>
           </Timeline>
 
           <Timeline year="2015">
+            <TimelineItemText>
+              Switched to <ColoredText>Cinema 4D</ColoredText> for 3D graphics
+            </TimelineItemText>
             <TimelineItemSmall img="/images/journey/mascot-productions.jpg">
               <ColoredText>Mascot Production&apos;s</ColoredText> final look
             </TimelineItemSmall>
             <TimelineItemSmall img="/images/journey/lokinmal.jpg">
               Concept art
             </TimelineItemSmall>
+            <TimelineItemSmall img="/images/journey/3d-render-concept.jpg">
+              3D render based on the concept art
+            </TimelineItemSmall>
           </Timeline>
 
           <Timeline year="2016">
+            <TimelineItemSmall img="/images/journey/3d-winter.jpg">
+              3D render
+            </TimelineItemSmall>
+            <TimelineItemSmall img="/images/journey/dungeon-cover.jpg">
+              Magazine cover
+            </TimelineItemSmall>
+            <TimelineItemSmall img="/images/journey/3d-zeletava.jpg">
+              3D render
+            </TimelineItemSmall>
             <TimelineItemText>
               Started studying at <ColoredText>DELTA</ColoredText>
+            </TimelineItemText>
+            <TimelineItemSmall img="/images/journey/musical-poster.jpg">
+              Poster
+            </TimelineItemSmall>
+            <TimelineItemText>
+              Switching my workflow into{' '}
+              <ColoredText>Adobe Creative Cloud</ColoredText> suite.
             </TimelineItemText>
           </Timeline>
 
           <Timeline year="2017">
+            <TimelineItemSmall img="/images/journey/skyzio-logo.png">
+              Logo
+            </TimelineItemSmall>
+            <TimelineItemLarge
+              title="first steps in digital art"
+              img="/images/journey/first-drawing.jpg"
+              width="sm"
+            >
+              After getting my hands on my trusty graphic tablet, I dove right
+              into digital art, starting with a medieval fantasy spy scene.
+            </TimelineItemLarge>
+          </Timeline>
+
+          <Timeline year="2018">
+            <TimelineItemLarge
+              title="send me an angel project"
+              img="/images/journey/send-me-an-angel.jpg"
+              width="lg"
+              type="video"
+              videoUrl="https://www.youtube.com/embed/z0cQYvOAgxE"
+            >
+              My first major video project which involved all the different
+              production roles, securing locations and costumes.
+            </TimelineItemLarge>
+
+            <TimelineItemSmall img="/images/journey/hamster.png">
+              Hamster illustration
+            </TimelineItemSmall>
+
+            <TimelineItemSmall img="/images/journey/logo-health.png">
+              Logo
+            </TimelineItemSmall>
+          </Timeline>
+
+          <Timeline year="2019">
+            <TimelineItemSmall img="/images/journey/dnd-2.jpg">
+              D&amp;D characters
+            </TimelineItemSmall>
+          </Timeline>
+
+          <Timeline year="2020">
             <TimelineItemText>
-              Started studying at <ColoredText>DELTA</ColoredText>
+              Started studying at{' '}
+              <ColoredText>Northumbria University</ColoredText>
             </TimelineItemText>
           </Timeline>
         </Section>

@@ -5,16 +5,34 @@ import {
   Grid,
   GridItem,
   Heading,
-  useColorModeValue
+  useColorModeValue,
+  Modal,
+  ModalOverlay,
+  ModalContent,
+  ModalCloseButton,
+  ModalBody,
+  useDisclosure,
+  AspectRatio
 } from '@chakra-ui/react'
+import { animate } from 'framer-motion'
 import theme from '../libs/theme'
 
 export const TimelineItemSmall = ({ children, img }) => {
+  const { isOpen, onOpen, onClose } = useDisclosure()
   return (
     <>
+      <Modal isOpen={isOpen} onClose={onClose} isCentered={true} size="3xl">
+        <ModalOverlay />
+        <ModalContent>
+          <ModalCloseButton />
+          <ModalBody alignSelf="center">
+            <Image src={img} alt={children} minW="150px" maxH="80vh" />
+          </ModalBody>
+        </ModalContent>
+      </Modal>
       <Box
         maxH={{ base: '200px', md: '150px' }}
-        maxW={{ base: 'lg', md: '300px' }}
+        maxW={{ base: '45%', md: '300px' }}
         borderWidth="1px"
         borderRadius="lg"
         overflow="hidden"
@@ -22,11 +40,20 @@ export const TimelineItemSmall = ({ children, img }) => {
           theme.colors.michalGray.base + '33',
           theme.colors.michalCream.base + '33'
         )}
+        transition="0.2s"
+        onClick={onOpen}
+        _hover={{
+          background: useColorModeValue(
+            theme.colors.highlight.light + '33',
+            theme.colors.highlight.dark + '33'
+          ),
+          cursor: 'pointer'
+        }}
       >
         <Image
           objectFit="cover"
-          height={{ base: '150px', md: '115px' }}
-          width={{ base: 'lg', md: '100%' }}
+          height={{ base: '125px', md: '115px' }}
+          width={{ base: 'sm', md: '100%' }}
           src={img}
           alt={children}
         />
@@ -39,11 +66,42 @@ export const TimelineItemSmall = ({ children, img }) => {
   )
 }
 
-export const TimelineItemLarge = ({ title, img, width, children }) => {
+export const TimelineItemLarge = ({
+  type = 'image',
+  title,
+  img,
+  width,
+  children,
+  videoUrl = 'https://www.youtube.com/embed/dQw4w9WgXcQ'
+}) => {
+  const { isOpen, onOpen, onClose } = useDisclosure()
+
+  const modalItem =
+    type === 'image' ? (
+      <Image src={img} alt={children} minW="150px" maxH="80vh" />
+    ) : (
+      <Box>
+        <AspectRatio minW={{ base: '75vw', md: '560px' }} ratio={16 / 9}>
+          <iframe
+            title="Send me an angel - AURORA studio"
+            src={videoUrl}
+            allowFullScreen
+          />
+        </AspectRatio>
+      </Box>
+    )
+
   return (
     <>
+      <Modal isOpen={isOpen} onClose={onClose} isCentered={true} size="3xl">
+        <ModalOverlay />
+        <ModalContent>
+          <ModalCloseButton />
+          <ModalBody alignSelf="center">{modalItem}</ModalBody>
+        </ModalContent>
+      </Modal>
       <Box
-        maxW={{ base: 'lg', md: width }}
+        maxW={{ base: '92%', md: width }}
         borderWidth="1px"
         borderRadius="lg"
         overflow="hidden"
@@ -51,18 +109,27 @@ export const TimelineItemLarge = ({ title, img, width, children }) => {
           theme.colors.michalGray.base + '33',
           theme.colors.michalCream.base + '33'
         )}
+        transition="0.2s"
+        onClick={onOpen}
+        _hover={{
+          background: useColorModeValue(
+            theme.colors.highlight.light + '33',
+            theme.colors.highlight.dark + '33'
+          ),
+          cursor: 'pointer'
+        }}
       >
-        <Grid templateColumns="repeat(3, 1fr)">
-          <GridItem colSpan={{ base: 3, md: 1 }}>
+        <Grid templateColumns="repeat(6, 1fr)">
+          <GridItem colSpan={{ base: 3, md: 2 }}>
             <Image
               objectFit="cover"
-              height={{ base: 'auto', md: '150px' }}
-              maxW="100%"
+              height={{ base: '100%', md: '150px' }}
+              width={{ base: '100%', md: '100%' }}
               src={img}
               alt={title}
             />
           </GridItem>
-          <GridItem colSpan={{ base: 3, md: 2 }}>
+          <GridItem colSpan={{ base: 3, md: 4 }}>
             <Box p={5}>
               <Heading as="h4" variant="timeline-title">
                 {title}
@@ -80,7 +147,7 @@ export const TimelineItemText = ({ children }) => {
   return (
     <Box
       height={{ base: 'auto', md: '150px' }}
-      width={{ base: 'lg', md: '150px' }}
+      width={{ base: '45%', md: '150px' }}
       borderWidth="1px"
       borderRadius="lg"
       borderColor={useColorModeValue(
