@@ -14,7 +14,7 @@ export const TimelineItemSmall = ({ children, img }) => {
     <>
       <Box
         maxH="150px"
-        maxW="200px"
+        maxW="300px"
         borderWidth="1px"
         borderRadius="lg"
         overflow="hidden"
@@ -26,7 +26,7 @@ export const TimelineItemSmall = ({ children, img }) => {
         <Image
           objectFit="cover"
           height="115px"
-          maxW="150px"
+          maxW="300px"
           width="100%"
           src={img}
           alt={children}

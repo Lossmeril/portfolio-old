@@ -84,20 +84,62 @@ const Journey = () => {
             </TimelineItemLarge>
           </Timeline>
 
+          <Timeline year="2013">
+            <TimelineItemText>
+              Starting to experiment with 3D graphics in{' '}
+              <ColoredText>Blender</ColoredText>
+            </TimelineItemText>
+
+            <TimelineItemLarge
+              title="a movie studio founded"
+              img="/images/journey/first-3d.jpg"
+              width="sm"
+            >
+              My friends and I started a film studio{' '}
+              <ColoredText>Mascot Productions</ColoredText> at elementary
+              school.
+            </TimelineItemLarge>
+          </Timeline>
+
           <Timeline year="2014">
             <TimelineItemLarge
-              title="Experimenting with 3D"
-              img="/images/journey/first-3d.jpg"
-              width="lg"
+              title='first "feature" film'
+              img="/images/journey/mascot-holmes.jpg"
+              width="sm"
             >
-              In order to create an animated intro for my elementary school film
-              studio <ColoredText>Mascot Productions</ColoredText>, I began to
-              play with three-dimensional graphics in{' '}
-              <ColoredText>Blender</ColoredText>.
+              <ColoredText>Mascot Holmes</ColoredText> - a film about a crime
+              solving tennis ball we made as kids. Twist on &quot;Detective
+              Pikachu&quot; ahead of its time
             </TimelineItemLarge>
+
             <TimelineItemText>
               Making photo videos for my class in{' '}
               <ColoredText>Camtasia Studio 7</ColoredText>
+            </TimelineItemText>
+
+            <TimelineItemSmall img="/images/journey/dnd.jpg">
+              D&amp;D illustration
+            </TimelineItemSmall>
+          </Timeline>
+
+          <Timeline year="2015">
+            <TimelineItemSmall img="/images/journey/mascot-productions.jpg">
+              <ColoredText>Mascot Production&apos;s</ColoredText> final look
+            </TimelineItemSmall>
+            <TimelineItemSmall img="/images/journey/lokinmal.jpg">
+              Concept art
+            </TimelineItemSmall>
+          </Timeline>
+
+          <Timeline year="2016">
+            <TimelineItemText>
+              Started studying at <ColoredText>DELTA</ColoredText>
+            </TimelineItemText>
+          </Timeline>
+
+          <Timeline year="2017">
+            <TimelineItemText>
+              Started studying at <ColoredText>DELTA</ColoredText>
             </TimelineItemText>
           </Timeline>
         </Section>
