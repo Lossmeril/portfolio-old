@@ -258,12 +258,6 @@ const Home = () => {
 
         <Section delay="1.1">
           <Heading as="h2" variant="section-title">
-            How did I get here?
-          </Heading>
-        </Section>
-
-        <Section delay="1.6">
-          <Heading as="h2" variant="section-title">
             What do I love?
           </Heading>
 
@@ -311,7 +305,7 @@ const Home = () => {
           </SimpleGrid>
         </Section>
 
-        <Section delay="2.1">
+        <Section delay="1.6">
           <Heading as="h2" variant="section-title">
             Where can you find me?
           </Heading>
