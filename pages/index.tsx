@@ -1,4 +1,3 @@
-import NextLink from 'next/link'
 import {
   Container,
   Box,
@@ -66,6 +65,8 @@ import { AvidIcon } from '../components/icons/avid-icon'
 import SkillTag from '../components/skill-tags'
 import ColoredText from '../components/colored-text'
 import { CeltxIcon } from '../components/icons/celtx'
+import { TimelineItemText } from '../components/timeline-item'
+import BusinessCard from '../components/business-card'
 
 const ProfileImage = chakra(Image, {
   shouldForwardProp: prop => ['width', 'height', 'src', 'alt'].includes(prop)
@@ -265,19 +266,43 @@ const Home = () => {
             <Box>
               <List>
                 <ListItem>
-                  <ListIcon as={RiBook2Fill} />
+                  <ListIcon
+                    as={RiBook2Fill}
+                    fill={useColorModeValue(
+                      theme.colors.highlight.light,
+                      theme.colors.highlight.dark
+                    )}
+                  />
                   Books
                 </ListItem>
                 <ListItem>
-                  <ListIcon as={RiFilmFill} />
+                  <ListIcon
+                    as={RiFilmFill}
+                    fill={useColorModeValue(
+                      theme.colors.highlight.light,
+                      theme.colors.highlight.dark
+                    )}
+                  />
                   Movies
                 </ListItem>
                 <ListItem>
-                  <ListIcon as={IoGameController} />
+                  <ListIcon
+                    as={IoGameController}
+                    fill={useColorModeValue(
+                      theme.colors.highlight.light,
+                      theme.colors.highlight.dark
+                    )}
+                  />
                   Videogames
                 </ListItem>
                 <ListItem>
-                  <ListIcon as={FaRecordVinyl} />
+                  <ListIcon
+                    as={FaRecordVinyl}
+                    fill={useColorModeValue(
+                      theme.colors.highlight.light,
+                      theme.colors.highlight.dark
+                    )}
+                  />
                   Music on vinyl
                 </ListItem>
               </List>
@@ -285,19 +310,43 @@ const Home = () => {
             <Box>
               <List>
                 <ListItem>
-                  <ListIcon as={FaDiceD20} />
+                  <ListIcon
+                    as={FaDiceD20}
+                    fill={useColorModeValue(
+                      theme.colors.highlight.light,
+                      theme.colors.highlight.dark
+                    )}
+                  />
                   Dungeons and Dragons
                 </ListItem>
                 <ListItem>
-                  <ListIcon as={MdCatchingPokemon} />
+                  <ListIcon
+                    as={MdCatchingPokemon}
+                    fill={useColorModeValue(
+                      theme.colors.highlight.light,
+                      theme.colors.highlight.dark
+                    )}
+                  />
                   Pokémon
                 </ListItem>
                 <ListItem>
-                  <ListIcon as={GiCat} />
+                  <ListIcon
+                    as={GiCat}
+                    fill={useColorModeValue(
+                      theme.colors.highlight.light,
+                      theme.colors.highlight.dark
+                    )}
+                  />
                   Cats
                 </ListItem>
                 <ListItem>
-                  <ListIcon as={GiVisoredHelm} />
+                  <ListIcon
+                    as={GiVisoredHelm}
+                    fill={useColorModeValue(
+                      theme.colors.highlight.light,
+                      theme.colors.highlight.dark
+                    )}
+                  />
                   Medieval history
                 </ListItem>
               </List>
@@ -306,9 +355,10 @@ const Home = () => {
         </Section>
 
         <Section delay="1.6">
-          <Heading as="h2" variant="section-title">
+          <Heading as="h2" variant="section-title" mb={10}>
             Where can you find me?
           </Heading>
+          <BusinessCard />
         </Section>
       </Container>
     </Layout>

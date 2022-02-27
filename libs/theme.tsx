@@ -55,7 +55,12 @@ const components = {
         fontSize: '14pt',
         textTransform: 'lowercase',
         marginBottom: 3
-      }
+      },
+      'business-card': props => ({
+        fontSize: '20pt',
+        color: colors.michalCream.base,
+        textTransform: 'lowercase'
+      })
     }
   },
   Link: {
@@ -67,6 +72,15 @@ const components = {
       'skill-icon': props => ({
         color: mode(colors.michalGray.base, colors.michalCream.base)(props),
 
+        '&:hover': {
+          color: colors.michalGreen.base
+        }
+      }),
+
+      'business-card': props => ({
+        color: colors.michalCream.base,
+        fontSize: '11pt',
+        fontWeight: 'bold',
         '&:hover': {
           color: colors.michalGreen.base
         }
