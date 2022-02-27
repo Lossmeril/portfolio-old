@@ -7,8 +7,7 @@ import {
   Grid,
   GridItem,
   Image,
-  Divider,
-  Stack
+  Divider
 } from '@chakra-ui/react'
 import Tilt from 'react-tilt'
 import theme from '../libs/theme'
@@ -19,7 +18,11 @@ import ColoredText from './colored-text'
 const BusinessCard = () => {
   return (
     <Tilt className="Tilt" options={{ max: 20, scale: 1.05 }}>
-      <AspectRatio width="75%" ratio={85 / 55} className="Tilt-inner">
+      <AspectRatio
+        width={{ base: '300px', md: '430px' }}
+        ratio={85 / 55}
+        className="Tilt-inner"
+      >
         <>
           <Image
             src="/images/paper.jpg"
@@ -43,18 +46,22 @@ const BusinessCard = () => {
             <Grid
               templateColumns="repeat(3, 1fr)"
               width="100%"
-              ml="50px"
-              mr="150px"
+              ml={{ base: '35px', md: '50px' }}
+              mr={{ base: '100px', md: '150px' }}
             >
               <GridItem colSpan={3}>
-                <Heading as="p" variant="business-card">
+                <Heading
+                  as="p"
+                  variant="business-card"
+                  fontSize={{ base: '15pt', md: '22pt' }}
+                >
                   Michal{' '}
                   <ColoredText textColor={theme.colors.michalGreen.base}>
                     Špitálský
                   </ColoredText>
                   <Divider
-                    mt={5}
-                    mb={5}
+                    mt={{ base: 2.5, md: 5 }}
+                    mb={{ base: 2.5, md: 5 }}
                     borderBottomColor={theme.colors.michalCream.base}
                   />
                 </Heading>
@@ -84,11 +91,11 @@ const BusinessCard = () => {
             </Grid>
             <Image
               src="/images/bc-logo.png"
-              width="200px"
-              height="200px"
+              width={{ base: '125px', md: '200px' }}
+              height={{ base: '125px', md: '200px' }}
               position="absolute"
               bottom="40px"
-              right="-100px"
+              right={{ base: '-62.5px', md: '-100px' }}
             />
           </Box>
         </>

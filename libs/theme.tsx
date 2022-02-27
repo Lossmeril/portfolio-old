@@ -56,11 +56,10 @@ const components = {
         textTransform: 'lowercase',
         marginBottom: 3
       },
-      'business-card': props => ({
-        fontSize: '20pt',
+      'business-card': {
         color: colors.michalCream.base,
         textTransform: 'lowercase'
-      })
+      }
     }
   },
   Link: {
@@ -79,8 +78,6 @@ const components = {
 
       'business-card': props => ({
         color: colors.michalCream.base,
-        fontSize: '11pt',
-        fontWeight: 'bold',
         '&:hover': {
           color: colors.michalGreen.base
         }
