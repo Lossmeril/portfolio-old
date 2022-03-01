@@ -4,8 +4,7 @@ import {
   useColorModeValue,
   Divider,
   Heading,
-  Text,
-  AspectRatio
+  Text
 } from '@chakra-ui/react'
 import theme from '../libs/theme'
 import Layout from '../components/layouts/article'

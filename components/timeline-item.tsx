@@ -14,7 +14,6 @@ import {
   useDisclosure,
   AspectRatio
 } from '@chakra-ui/react'
-import { animate } from 'framer-motion'
 import theme from '../libs/theme'
 
 export const TimelineItemSmall = ({ children, img }) => {
@@ -43,10 +42,6 @@ export const TimelineItemSmall = ({ children, img }) => {
         transition="0.2s"
         onClick={onOpen}
         _hover={{
-          background: useColorModeValue(
-            theme.colors.highlight.light + '33',
-            theme.colors.highlight.dark + '33'
-          ),
           cursor: 'pointer'
         }}
       >
