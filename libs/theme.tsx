@@ -59,6 +59,10 @@ const components = {
       'business-card': {
         color: colors.michalCream.base,
         textTransform: 'lowercase'
+      },
+      'film-title': {
+        fontSize: 18,
+        textTransform: 'lowercase'
       }
     }
   },

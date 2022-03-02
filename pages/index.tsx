@@ -65,7 +65,6 @@ import { AvidIcon } from '../components/icons/avid-icon'
 import SkillTag from '../components/skill-tags'
 import ColoredText from '../components/colored-text'
 import { CeltxIcon } from '../components/icons/celtx'
-import { TimelineItemText } from '../components/timeline-item'
 import BusinessCard from '../components/business-card'
 
 const ProfileImage = chakra(Image, {
