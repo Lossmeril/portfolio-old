@@ -7,12 +7,12 @@ const NotFound = () => {
     <Container>
       <Box flexGrow={1} pt={5} pb={10}>
         <Heading as="h1" variant="page-title" pb={15}>
-          404: It's not very effective
+          404: It&apos;s not very effective
         </Heading>
         <Section delay="0.1">
           <Text mb={5}>
-            Oops, we've got ourselves a "page not found" error. Feel free to
-            contact me if you think that I overlooked somehing.
+            Oops, we&apos;ve got ourselves a &quot;page not found&quot; error.
+            Feel free to contact me if you think that I overlooked somehing.
           </Text>
           <Text mb={5}>
             Either way you can return to the homepage using link below.
