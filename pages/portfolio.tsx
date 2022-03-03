@@ -41,7 +41,7 @@ const Portfolio = () => {
           </Box>
         </Box>
         <Divider
-          mb={12}
+          mb={8}
           mt={2}
           opacity={0.2}
           borderColor={useColorModeValue(
