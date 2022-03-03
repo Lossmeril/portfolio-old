@@ -110,6 +110,20 @@ const Portfolio = () => {
             </PortfolioFilm>
           </Wrap>
         </Section>
+
+        <Section delay="1.1">
+          <Heading as="h2" variant="section-title">
+            Projects
+          </Heading>
+          <PortfolioProject
+            img="/images/films/Send me an angel.png"
+            title="Rise of Pilgrims"
+          >
+            Since 2020 I have been working on creating assets for a browser game{' '}
+            <ColoredText>Rise of Pilgrims</ColoredText>.
+          </PortfolioProject>
+        </Section>
+
       </Container>
     </Layout>
   )
