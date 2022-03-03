@@ -32,6 +32,7 @@ const BusinessCard = () => {
             zIndex={3}
             blendMode="multiply"
             pointerEvents="none"
+            alt="business card"
           />
           <Box
             bgGradient={
@@ -96,6 +97,7 @@ const BusinessCard = () => {
               position="absolute"
               bottom="40px"
               right={{ base: '-62.5px', md: '-100px' }}
+              alt="logo"
             />
           </Box>
         </>

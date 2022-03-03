@@ -2,7 +2,7 @@ import { Box, Link, Text } from '@chakra-ui/react'
 
 const Footer = () => {
   return (
-    <Box textAlign="center" opacity={0.8} fontSize="sm">
+    <Box textAlign="center" fontSize="sm">
       <Text mb={2}>
         &copy; {new Date().getFullYear()} Michal Špitálský. All Rights Reserved.
       </Text>
