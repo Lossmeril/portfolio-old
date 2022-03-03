@@ -352,10 +352,9 @@ const Home = () => {
             </Box>
           </SimpleGrid>
         </Section>
-
         <Section delay="1.6">
           <Heading as="h2" variant="section-title" mb={10}>
-            Where can you find me?
+            Have my business card
           </Heading>
           <BusinessCard />
         </Section>

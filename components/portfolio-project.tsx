@@ -5,14 +5,7 @@ import {
   Grid,
   GridItem,
   Heading,
-  useColorModeValue,
-  Modal,
-  ModalOverlay,
-  ModalContent,
-  ModalCloseButton,
-  ModalBody,
-  useDisclosure,
-  AspectRatio
+  useColorModeValue
 } from '@chakra-ui/react'
 import theme from '../libs/theme'
 
@@ -28,14 +21,6 @@ const PortfolioProject = ({ title, img, children }) => {
           theme.colors.michalGray.base + '33',
           theme.colors.michalCream.base + '33'
         )}
-        transition="0.2s"
-        _hover={{
-          background: useColorModeValue(
-            theme.colors.highlight.light + '33',
-            theme.colors.highlight.dark + '33'
-          ),
-          cursor: 'pointer'
-        }}
       >
         <Grid templateColumns="repeat(6, 1fr)">
           <GridItem colSpan={{ base: 3, md: 2 }}>

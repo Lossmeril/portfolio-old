@@ -84,6 +84,12 @@ const Portfolio = () => {
             <PortfolioItem img="/images/portfolio/tarot-1.png">
               Tarot card designs
             </PortfolioItem>
+            <PortfolioItem img="/images/portfolio/fort-logo.png">
+              FORT company logo
+            </PortfolioItem>
+            <PortfolioItem img="/images/portfolio/coat-of-arms.png">
+              Heraldic coat of arms design
+            </PortfolioItem>
             <PortfolioItem img="/images/portfolio/joja-poster.png">
               Stardew Valley inspired vintage poster
             </PortfolioItem>
