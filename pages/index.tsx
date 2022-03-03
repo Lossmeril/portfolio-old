@@ -172,7 +172,7 @@ const Home = () => {
             .
           </Paragraph>
           <Box textAlign="left" my={4}>
-            <PortfolioButton icon={<IoImagesSharp />} link="">
+            <PortfolioButton icon={<IoImagesSharp />} link="/portfolio">
               Portfloio
             </PortfolioButton>
             <PortfolioButton icon={<AiOutlineFilePdf />} link="">
