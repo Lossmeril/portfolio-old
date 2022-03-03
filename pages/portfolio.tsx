@@ -5,7 +5,8 @@ import {
   Divider,
   Heading,
   Text,
-  Wrap
+  Wrap,
+  AspectRatio
 } from '@chakra-ui/react'
 import theme from '../libs/theme'
 import Layout from '../components/layouts/article'
@@ -13,6 +14,11 @@ import Section from '../components/section'
 
 import PortfolioItem from '../components/portfolio-item'
 import PortfolioFilm from '../components/portfolio-film'
+import PortfolioButton from '../components/portfolio-button'
+import { AiOutlineFilePdf } from 'react-icons/ai'
+import { RiFilmFill } from 'react-icons/ri'
+import PortfolioProject from '../components/portfolio-project'
+import ColoredText from '../components/colored-text'
 
 const Portfolio = () => {
   return (
@@ -38,6 +44,14 @@ const Portfolio = () => {
               My portfolio
             </Heading>
             <Text>A showcase of all the work that I am proud of ❤️</Text>
+            <Box textAlign="left" my={4}>
+              <PortfolioButton icon={<AiOutlineFilePdf />} link="">
+                PDF portfolio
+              </PortfolioButton>
+              <PortfolioButton icon={<RiFilmFill />} link="#showreel">
+                Showreel
+              </PortfolioButton>
+            </Box>
           </Box>
         </Box>
         <Divider
@@ -124,6 +138,20 @@ const Portfolio = () => {
           </PortfolioProject>
         </Section>
 
+        <Section delay="1.6">
+          <div id="showreel">
+            <Heading as="h2" variant="section-title">
+              Showreel
+            </Heading>
+            <AspectRatio ratio={16 / 9}>
+              <iframe
+                title="Michal Špitálský film showreel"
+                src="https://www.youtube.com/embed/4KebR3ALzVc"
+                allowFullScreen
+              />
+            </AspectRatio>
+          </div>
+        </Section>
       </Container>
     </Layout>
   )
