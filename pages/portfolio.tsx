@@ -50,22 +50,31 @@ const Portfolio = () => {
           )}
         />
 
-        <Section delay="0.6">
+        <Section delay="0.1">
           <Heading as="h2" variant="section-title">
             Design
           </Heading>
           <Wrap spacing={1.5}>
             <PortfolioItem img="/images/portfolio/connor-a-virus.png">
-              poetry book cover design
+              Poetry book cover design
+            </PortfolioItem>
+            <PortfolioItem img="/images/portfolio/travelling-cart-poster.png">
+              Stardew Valley inspired vintage poster
             </PortfolioItem>
             <PortfolioItem img="/images/portfolio/covid-portal.png">
               Logo design for the Czech government covid-19 portal
             </PortfolioItem>
+            <PortfolioItem img="/images/portfolio/certification.png">
+              Certification design
+            </PortfolioItem>
             <PortfolioItem img="/images/portfolio/tarot-1.png">
-              tarot card designs
+              Tarot card designs
+            </PortfolioItem>
+            <PortfolioItem img="/images/portfolio/joja-poster.png">
+              Stardew Valley inspired vintage poster
             </PortfolioItem>
             <PortfolioItem img="/images/portfolio/tarot-2.png">
-              tarot card design - the emperor
+              Tarot card design - the emperor
             </PortfolioItem>
             <PortfolioItem img="/images/portfolio/dead-fish.png">
               Logo for a parkour team &quot;dead fish&quot;
@@ -74,7 +83,10 @@ const Portfolio = () => {
               Logo for culinary high school e-sports team
             </PortfolioItem>
             <PortfolioItem img="/images/portfolio/tarot-3.png">
-              tarot card designs
+              Tarot card designs
+            </PortfolioItem>
+            <PortfolioItem img="/images/portfolio/spa-poster.png">
+              Stardew Valley inspired vintage poster
             </PortfolioItem>
           </Wrap>
         </Section>
