@@ -7,7 +7,7 @@ import {
   Heading,
   useColorModeValue
 } from '@chakra-ui/react'
-import theme from '../libs/theme'
+import theme from '../../libs/theme'
 
 const PortfolioProject = ({ title, img, children }) => {
   return (

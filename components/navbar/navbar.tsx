@@ -5,7 +5,6 @@ import {
   Box,
   Link,
   Stack,
-  Heading,
   Flex,
   Menu,
   MenuItem,
@@ -16,7 +15,7 @@ import {
 } from '@chakra-ui/react'
 import { HamburgerIcon } from '@chakra-ui/icons'
 import ThemeToggleButton from './theme-toggle-button'
-import theme from '../libs/theme'
+import theme from '../../libs/theme'
 
 const LinkItem = ({ href, path, children }) => {
   const active = path === href
@@ -53,7 +52,6 @@ const Navbar = props => {
         flexWrap="wrap"
         alignItems="center"
         justifyItems="space-between"
-        /*borderBottom={"solid 1px"+useColorModeValue(theme.colors.michalGray.base+"20", theme.colors.michalCream.base)}*/
       >
         <Flex align="center" mr={5}>
           <Logo />

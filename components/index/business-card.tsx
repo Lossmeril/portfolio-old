@@ -2,7 +2,6 @@ import {
   Box,
   AspectRatio,
   List,
-  useColorModeValue,
   Heading,
   Grid,
   GridItem,
@@ -10,10 +9,10 @@ import {
   Divider
 } from '@chakra-ui/react'
 import Tilt from 'react-tilt'
-import theme from '../libs/theme'
+import theme from '../../libs/theme'
 import { IoLogoFacebook, IoLogoGithub, IoLogoLinkedin } from 'react-icons/io5'
 import BusinessCardLink from './business-card-link'
-import ColoredText from './colored-text'
+import ColoredText from '../colored-text'
 
 const BusinessCard = () => {
   return (

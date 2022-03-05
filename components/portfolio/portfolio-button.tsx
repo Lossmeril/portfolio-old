@@ -1,6 +1,6 @@
 import NextLink from 'next/link'
 import { Button, useColorModeValue } from '@chakra-ui/react'
-import theme from '../libs/theme'
+import theme from '../../libs/theme'
 
 const PortfolioButton = ({ children, icon, link }) => {
   return (

@@ -80,18 +80,13 @@ const components = {
         }
       }),
 
-      'business-card': props => ({
+      'business-card': {
         color: colors.michalCream.base,
         '&:hover': {
           color: colors.michalGreen.base
         }
-      })
+      }
     }
-  },
-  ListIcon: {
-    basestyle: props => ({
-      fill: mode(colors.highlight.light, colors.highlight.dark)(props)
-    })
   }
 }
 

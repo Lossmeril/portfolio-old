@@ -1,62 +1,27 @@
-import {
-  Container,
-  Box,
-  useColorModeValue,
-  Divider,
-  Heading,
-  Text
-} from '@chakra-ui/react'
-import theme from '../libs/theme'
+import { Container, Text } from '@chakra-ui/react'
 import Layout from '../components/layouts/article'
 import Section from '../components/section'
 
-import Timeline from '../components/timeline'
+import Timeline from '../components/journey/timeline'
 import {
   TimelineItemSmall,
   TimelineItemLarge,
   TimelineItemText
-} from '../components/timeline-item'
+} from '../components/journey/timeline-item'
 import ColoredText from '../components/colored-text'
+import Header from '../components/header'
 
 const Journey = () => {
   return (
     <Layout>
       <Container>
-        <Box
-          display={{ md: 'flex' }}
-          bgGradient={useColorModeValue(
-            'linear(to-b,' +
-              theme.colors.michalCream.saturated +
-              '00 0%, ' +
-              theme.colors.michalCream.saturated +
-              'FF 25%)',
-            'linear(to-b,' +
-              theme.colors.michalGray.base +
-              '00 0%, ' +
-              theme.colors.michalGray.base +
-              'FF 50%)'
-          )}
-        >
-          <Box flexGrow={1} pt={5} pb={10}>
-            <Heading as="h1" variant="page-title" pb={15}>
-              My journey
-            </Heading>
-            <Text>
-              Some things are just too old to include in the portfolio...
-              However, without them I would not be where I am now! ❤️
-            </Text>
-            <Text>And I must say I made some progress...!</Text>
-          </Box>
-        </Box>
-        <Divider
-          mb={5}
-          mt={2}
-          opacity={0.2}
-          borderColor={useColorModeValue(
-            theme.colors.michalGray.base,
-            theme.colors.michalCream.base
-          )}
-        />
+        <Header title="My journey" isIndex={false}>
+          <Text>
+            Some things are just too old to include in the portfolio... However,
+            without them I would not be where I am now! ❤️
+          </Text>
+          <Text>And I must say I made some progress...!</Text>
+        </Header>
 
         <Section delay="0.6">
           <Timeline year="2012">

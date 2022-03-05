@@ -14,7 +14,7 @@ import {
   useDisclosure,
   AspectRatio
 } from '@chakra-ui/react'
-import theme from '../libs/theme'
+import theme from '../../libs/theme'
 
 export const TimelineItemSmall = ({ children, img }) => {
   const { isOpen, onOpen, onClose } = useDisclosure()

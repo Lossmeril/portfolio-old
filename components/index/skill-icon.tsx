@@ -11,7 +11,7 @@ import {
   WrapItem
 } from '@chakra-ui/react'
 import { RiStarFill, RiStarLine } from 'react-icons/ri'
-import theme from '../libs/theme'
+import theme from '../../libs/theme'
 
 const SkillIcon = ({
   as,

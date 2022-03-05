@@ -1,5 +1,5 @@
 import Head from 'next/head'
-import Navbar from '../navbar'
+import Navbar from '../navbar/navbar'
 import { Box, Container } from '@chakra-ui/react'
 
 import ModelLoader from '../3d-model-loader'

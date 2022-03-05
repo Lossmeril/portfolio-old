@@ -5,7 +5,7 @@ import {
   useColorModeValue,
   WrapItem
 } from '@chakra-ui/react'
-import theme from '../libs/theme'
+import theme from '../../libs/theme'
 
 const SkillTag = ({ children, icon }) => {
   return (
