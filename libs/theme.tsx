@@ -37,15 +37,24 @@ const components = {
   Heading: {
     variants: {
       'section-title': {
-        textDecoration: 'underline',
         fontSize: 20,
-        textUnderlineOffset: 10,
-        textDecorationThickness: 4,
         marginTop: 3,
         marginBottom: 6,
         textTransform: 'lowercase',
-        textDecorationColor: colors.michalGreen.base
+
+        position: 'relative',
+        paddingBottom: '8pt',
+
+        '&::after': {
+          content: '""',
+          position: 'absolute',
+          bottom: '0',
+          left: '0',
+          width: '50px',
+          borderBottom: '5px solid ' + colors.michalGreen.base
+        }
       },
+
       'skill-title': props => ({
         fontSize: 18,
         textTransform: 'lowercase',

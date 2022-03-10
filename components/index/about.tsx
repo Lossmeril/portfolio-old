@@ -42,6 +42,7 @@ const About = () => {
           maxH={{ base: '250px', md: '100%' }}
           src="/images/gameboy.png"
           objectFit="contain"
+          alt="Michal Špitálský"
         />
       </GridItem>
     </Grid>
