@@ -1,48 +1,69 @@
 import PortfolioItem from './portfolio-item'
 import PortfolioSection from './portfolio-section'
 
+const designs = [
+  {
+    name: 'Poetry book cover design',
+    img: 'connor-a-virus.png'
+  },
+  {
+    name: 'Stardew Valley inspired vintage poster',
+    img: 'travelling-cart-poster.png'
+  },
+  {
+    name: 'Logo design for the Czech government covid-19 portal',
+    img: 'covid-portal.png'
+  },
+  {
+    name: 'Certification design',
+    img: 'certification.png'
+  },
+  {
+    name: 'Tarot card designs',
+    img: 'tarot-1.png'
+  },
+  {
+    name: 'FORT company logo',
+    img: 'fort-logo.png'
+  },
+  {
+    name: 'Heraldic coat of arms design',
+    img: 'coat-of-arms.png'
+  },
+  {
+    name: 'Stardew Valley inspired vintage poster',
+    img: 'joja-poster.png'
+  },
+  {
+    name: 'Tarot card design - the emperor',
+    img: 'tarot-2.png'
+  },
+  {
+    name: 'Logo for a parkour team &quot;dead fish&quot;',
+    img: 'dead-fish.png'
+  },
+  {
+    name: 'Logo for culinary high school e-sports team',
+    img: 'labska-logo.png'
+  },
+  {
+    name: 'Tarot card designs',
+    img: 'tarot-3.png'
+  },
+  {
+    name: 'Stardew Valley inspired vintage poster',
+    img: 'spa-poster.png'
+  }
+]
+
 const PortfolioSectionDesign = () => {
   return (
     <PortfolioSection spacing={1.5}>
-      <PortfolioItem img="/images/portfolio/connor-a-virus.png">
-        Poetry book cover design
-      </PortfolioItem>
-      <PortfolioItem img="/images/portfolio/travelling-cart-poster.png">
-        Stardew Valley inspired vintage poster
-      </PortfolioItem>
-      <PortfolioItem img="/images/portfolio/covid-portal.png">
-        Logo design for the Czech government covid-19 portal
-      </PortfolioItem>
-      <PortfolioItem img="/images/portfolio/certification.png">
-        Certification design
-      </PortfolioItem>
-      <PortfolioItem img="/images/portfolio/tarot-1.png">
-        Tarot card designs
-      </PortfolioItem>
-      <PortfolioItem img="/images/portfolio/fort-logo.png">
-        FORT company logo
-      </PortfolioItem>
-      <PortfolioItem img="/images/portfolio/coat-of-arms.png">
-        Heraldic coat of arms design
-      </PortfolioItem>
-      <PortfolioItem img="/images/portfolio/joja-poster.png">
-        Stardew Valley inspired vintage poster
-      </PortfolioItem>
-      <PortfolioItem img="/images/portfolio/tarot-2.png">
-        Tarot card design - the emperor
-      </PortfolioItem>
-      <PortfolioItem img="/images/portfolio/dead-fish.png">
-        Logo for a parkour team &quot;dead fish&quot;
-      </PortfolioItem>
-      <PortfolioItem img="/images/portfolio/labska-logo.png">
-        Logo for culinary high school e-sports team
-      </PortfolioItem>
-      <PortfolioItem img="/images/portfolio/tarot-3.png">
-        Tarot card designs
-      </PortfolioItem>
-      <PortfolioItem img="/images/portfolio/spa-poster.png">
-        Stardew Valley inspired vintage poster
-      </PortfolioItem>
+      {designs.map(design => (
+        <PortfolioItem img={'/images/portfolio/' + design.img}>
+          {design.name}
+        </PortfolioItem>
+      ))}
     </PortfolioSection>
   )
 }

@@ -1,4 +1,4 @@
-import { Box, Image, Heading, AspectRatio } from '@chakra-ui/react'
+import { Box, Image, Heading } from '@chakra-ui/react'
 
 const PortfolioFilm = ({ children, img }) => {
   return (

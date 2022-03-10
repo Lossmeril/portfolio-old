@@ -1,4 +1,6 @@
+import React from 'react'
 import { Wrap } from '@chakra-ui/react'
+import { MdCameraRoll } from 'react-icons/md'
 import {
   IoCalendarSharp,
   IoCamera,
@@ -7,27 +9,33 @@ import {
   IoPricetag,
   IoShapesSharp
 } from 'react-icons/io5'
-import { MdCameraRoll } from 'react-icons/md'
 import {
   RiClapperboardFill,
   RiQuillPenFill,
   RiScissorsFill
 } from 'react-icons/ri'
+
 import SkillTag from './skill-tags'
 
-const Skills = () => {
+const skills = [
+  { icon: IoPricetag, name: 'Brand design' },
+  { icon: IoShapesSharp, name: 'Vector illustration' },
+  { icon: IoCalendarSharp, name: 'Event design' },
+  { icon: MdCameraRoll, name: 'Event videography' },
+  { icon: RiClapperboardFill, name: 'Directing' },
+  { icon: IoCamera, name: 'Camera operating' },
+  { icon: IoMic, name: 'Sound recording' },
+  { icon: RiScissorsFill, name: 'Video editing' },
+  { icon: RiQuillPenFill, name: 'Screenwriting' },
+  { icon: IoNewspaperSharp, name: 'Copywriting' }
+]
+
+const Skills: React.FC = () => {
   return (
     <Wrap spacing={2}>
-      <SkillTag icon={IoPricetag}>Brand design</SkillTag>
-      <SkillTag icon={IoShapesSharp}>Vector illustration</SkillTag>
-      <SkillTag icon={IoCalendarSharp}>Event design</SkillTag>
-      <SkillTag icon={MdCameraRoll}>Event videography</SkillTag>
-      <SkillTag icon={RiClapperboardFill}>Directing</SkillTag>
-      <SkillTag icon={IoCamera}>Camera operating</SkillTag>
-      <SkillTag icon={IoMic}>Sound recording</SkillTag>
-      <SkillTag icon={RiScissorsFill}>Video editing</SkillTag>
-      <SkillTag icon={RiQuillPenFill}>Screenwriting</SkillTag>
-      <SkillTag icon={IoNewspaperSharp}>Copywriting</SkillTag>
+      {skills.map(skill => (
+        <SkillTag icon={skill.icon}>{skill.name}</SkillTag>
+      ))}
     </Wrap>
   )
 }

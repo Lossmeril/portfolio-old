@@ -32,7 +32,7 @@ const PortfolioItem = ({ children, img }) => {
         </ModalContent>
       </Modal>
 
-      <AspectRatio width={{ base: '100%', md: '32%' }} ratio={1}>
+      <AspectRatio width={{ base: '49%', md: '23%' }} ratio={1}>
         <AnimatePresence>
           <motion.div
             whileHover={{
