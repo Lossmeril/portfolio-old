@@ -119,6 +119,7 @@ const SwAndTech = () => {
           name={sw.name}
           skill={sw.skill}
           w={sw.width ? sw.width : 8}
+          key={sw.name}
         >
           {sw.notes ? sw.notes : ''}
         </SkillIcon>

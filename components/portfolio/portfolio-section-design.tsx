@@ -60,7 +60,10 @@ const PortfolioSectionDesign = () => {
   return (
     <PortfolioSection spacing={1.5}>
       {designs.map(design => (
-        <PortfolioItem img={'/images/portfolio/' + design.img}>
+        <PortfolioItem
+          img={'/images/portfolio/' + design.img}
+          key={design.name}
+        >
           {design.name}
         </PortfolioItem>
       ))}

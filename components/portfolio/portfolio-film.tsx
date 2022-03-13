@@ -10,6 +10,7 @@ const PortfolioFilm = ({ children, img }) => {
         objectFit="contain"
         boxShadow="-5px 5px 15px -6px #000000"
         mr="auto"
+        alt={children}
       />
 
       <Heading variant="film-title" as="h3" textAlign="left" mt={3}>

@@ -24,7 +24,7 @@ const PortfolioSectionFilms = () => {
   return (
     <PortfolioSection>
       {films.map(film => (
-        <PortfolioFilm img={'/images/films/' + film.img}>
+        <PortfolioFilm img={'/images/films/' + film.img} key={film.name}>
           {film.name}
         </PortfolioFilm>
       ))}

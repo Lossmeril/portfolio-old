@@ -34,7 +34,9 @@ const Skills: React.FC = () => {
   return (
     <Wrap spacing={2}>
       {skills.map(skill => (
-        <SkillTag icon={skill.icon}>{skill.name}</SkillTag>
+        <SkillTag icon={skill.icon} key={skill.name}>
+          {skill.name}
+        </SkillTag>
       ))}
     </Wrap>
   )
