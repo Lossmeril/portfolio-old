@@ -23,7 +23,7 @@ const LinkItem = ({ href, path, children }) => {
 
   return (
     <NextLink href={href} passHref>
-      <Link p={2} color={active ? 'michalGreen' : inactiveColor}>
+      <Link p={2} color={active ? 'michalGreen.base' : inactiveColor}>
         {children}
       </Link>
     </NextLink>
