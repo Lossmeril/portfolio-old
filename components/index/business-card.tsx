@@ -75,7 +75,7 @@ const BusinessCard = () => {
                     /lossmeril
                   </BusinessCardLink>
                   <BusinessCardLink
-                    href="https://www.linkedin.com/in/michal-spitalsky/"
+                    href="https://www.linkedin.com/in/lossmeril"
                     icon={IoLogoLinkedin}
                   >
                     /michal-spitalsky

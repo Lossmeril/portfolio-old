@@ -6,7 +6,7 @@ const PortfolioSectionProjects = () => {
   return (
     <PortfolioSection>
       <PortfolioProject
-        img="/images/films/Send me an angel.png"
+        img="/images/projects/rise-of-pilgrims.jpg"
         title="Rise of Pilgrims"
       >
         Since 2020 I have been working on creating assets for a browser game{' '}

@@ -39,7 +39,7 @@ const designs = [
     img: 'tarot-2.png'
   },
   {
-    name: 'Logo for a parkour team &quot;dead fish&quot;',
+    name: 'Logo for a parkour team "dead fish"',
     img: 'dead-fish.png'
   },
   {
