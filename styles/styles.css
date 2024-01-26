@@ -1,0 +1,34 @@
+.splash-screen-box {
+  z-index: 10;
+  position: absolute;
+  top: 0;
+  left: 0;
+
+  width: 100vw;
+  height: 100vh;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  background-color: #1e1e1e;
+
+  color: white !important;
+}
+
+.splash-screen-box > div {
+  width: 800px;
+}
+
+.splash-screen-box h1 {
+  font-size: 72pt;
+  font-weight: bold;
+  line-height: 64pt;
+  margin-bottom: 0.5em;
+}
+
+.splash-screen-box p {
+  font-size: 14pt;
+  line-height: 22pt;
+  margin-bottom: 1em;
+}
